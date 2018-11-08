@@ -1,5 +1,6 @@
 # obstacleAvoidanceRobot
-This is an obstacle avoidance robot made with Arduino. The robot generally will travel in a straight line. When an obstacle is detected, the robot will make a decision on whether to turn around, or continue travelling if the obstacle has cleared.
+This is an obstacle avoidance robot made with Arduino. The robot detects obstacles in its path by using the HC-SR04 Ultrasonic sensor. A servo motor allows the sensor to "scan" the area in front of it (~180°).
+The robot generally will travel in a straight line. When an obstacle is detected, the robot will make a decision on whether to turn around, or continue travelling if the obstacle has cleared.
 
 The robot can detect obstacles in front, left, and right by it's sweeping scanner. Therefore, obstacle behind will not be detected, and it is possible to "box in" the robot.
 
