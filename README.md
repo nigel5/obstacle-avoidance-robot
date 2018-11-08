@@ -4,15 +4,35 @@ The robot generally will travel in a straight line. When an obstacle is detected
 
 The robot can detect obstacles in front, left, and right by it's sweeping scanner. Therefore, obstacle behind will not be detected, and it is possible to "box in" the robot.
 
-## Requirements
+# Table of Contents
+1. [Calibration of The Servos](#calibrationOfTheServos)
+2. [Test Ultrasonic Sensors](#testUltrasonicSensors)
+3. [Requirements](#requirements)
+4. [Note on Battery Voltage](#batteryProblem)
+5. [Known Issues](#knownIssues)
 
-#### External Libraries
-- NewPing 1.8
-
-#### Calibration of the servos
+---
+### Calibration of The Servos <a name="calibrationOfTheServos"></a>
 For maximum performance, the servos must be calibrating according to the manufacturers specifications before using this robot. Typically, this involves adjusting the potentiometer such that the motor will not spin at a pulse of 1500uS.
 
-#### BOM
+To test servo calibration, upload and run the program file 
+> calibrateServo.ino
+
+Calibrated servos will not move.
+
+### Test Ultrasonic Sensors <a name="testUltrasonicSensors"></a>
+To test the ultrasonic sensors, upload and run the program file
+> sonarTest.ino
+
+While connected to the computer, the program will output to console whether an obstacle has been detected, and ping value.
+
+---
+### Requirements <a name="requirements"></a>
+
+##### External Libraries
+- NewPing 1.8
+
+##### BOM
 - Arduino Uno Rev3 (1)
 - HC-SR04 Ultrasonic Sensor (1)
 - Parallax Servo Motor #900-00008 (continuous) (2)
@@ -20,10 +40,12 @@ For maximum performance, the servos must be calibrating according to the manufac
 - 6 AA Battery Holder Case with wire (1)
 - 2WD Robot Chassis Kit with Ball Caster (1)
 
-## Note on Battery Voltage
+---
+### Note on Battery Voltage <a name="batteryProblem"></a>
 Lower battery voltage than normal (1.5V) will affect behavior the robot, and may cause unexpected movements. For example, it may not turn enough to clear the obstacle.
 
 Symptoms of low battery include the robot not travelling straight, not clearing the obstacle, or "stuttering" start-stop movement.
 
-## Known Issues
+---
+### Known Issues <a name="knownIssues"></a>
 - It is very easy to trap the robot. Commonly, it will be in a deadlock on whether to turn or to continue forward.
