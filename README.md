@@ -25,4 +25,4 @@ Lower battery voltage than normal (1.5V) will affect behavior the robot, and may
 Symptoms of low battery include the robot not travelling straight, not clearing the obstacle, or "stuttering" start-stop movement.
 
 ## Known Issues
-- It is very easy to trap the robot. Commonly, it will be in a deadlock on whether to turn or continue forward.
+- It is very easy to trap the robot. Commonly, it will be in a deadlock on whether to turn or to continue forward.
